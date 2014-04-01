@@ -1,13 +1,14 @@
 
+
 function isKeyValue(object) {
     return object && _.isObject(object) && !_.isArray(object) && !_.isFunction(object);
 }
 
 beforeEach(function () {
   jasmine.addMatchers({
-    toBeContainedWithin: function() {
+    toContain: function() {
       return {
-        compare: function(subset, container) {
+        compare: function(container, subset) {
           var isContained;
           if (!isKeyValue(container) || !isKeyValue(subset)) {
               isContained = false;
