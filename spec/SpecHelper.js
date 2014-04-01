@@ -1,5 +1,3 @@
-
-
 function isKeyValue(object) {
     return object && _.isObject(object) && !_.isArray(object) && !_.isFunction(object);
 }
